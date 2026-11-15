@@ -28,7 +28,10 @@ while(True):
             certeza_de_guerreiro = int(input('Digite: '))
 
             if(certeza_de_guerreiro == 1):
-                pass
+                limpa_tela()
+                print('Você é um grande Guerreiro em uma vila isolada dos mapas, \nDaqueles Guerreiros que não falham, apenas o melhor do reino, \nEntão o Rei um dia te chama até seu castelo.')
+                print('\n\033[1mRei:\033[0m Meu grande Guerreiro, o rei esqueleto da cidade amaldiçoada \nestá ameaçando nossas vendas de mercadoria, isso não pode acontecer! \nVá até lá e o derrote com toda a sua bravura!')
+                
                 terminar_jogo = True
                 break
 
@@ -55,6 +58,7 @@ while(True):
             certeza_de_arqueiro = int(input('Digite: '))
         
             if(certeza_de_arqueiro == 1):
+                
                 pass
                 terminar_jogo = True
                 break
