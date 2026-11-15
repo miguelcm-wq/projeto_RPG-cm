@@ -63,7 +63,7 @@ while(True):
                 break
         
             else:
-                print('Algo deu errado!')
+                print('\nAlgo deu errado!')
                 print('Tente novamente')
         
         if(terminar_jogo == True):
@@ -127,5 +127,5 @@ while(True):
 
 
     else:
-        print('Algo deu errado!')
+        print('\nAlgo deu errado!')
         print('Tente novamente')

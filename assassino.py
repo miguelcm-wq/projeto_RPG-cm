@@ -8,7 +8,7 @@ assassino_ficha = {
 
 def mostrar_assassino(assassino_ficha):
     print('=' * 30)
-    print('Guerreiro'.center(30))
+    print('Assassino'.center(30))
     print(f'vida: {assassino_ficha["vida_atual"]} / {assassino_ficha["vida_max"]}')
     print(f'ataque: {assassino_ficha["ataque"]}')
     print(f'defesa: {assassino_ficha["defesa"]}')
