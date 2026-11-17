@@ -33,6 +33,9 @@ while(True):
                 print('Você é um grande Guerreiro em uma vila isolada dos mapas, \nDaqueles Guerreiros que não falham, apenas o melhor do reino, \nEntão o Rei um dia te chama até seu castelo.')
                 print('\n\033[1mRei:\033[0m Meu grande Guerreiro, o rei esqueleto da cidade amaldiçoada \nestá ameaçando nossas vendas de mercadoria, isso não pode acontecer! \nVá até lá e o derrote com toda a sua bravura!')
                 print('\n\033[1mGuerreiro:\033[0m Sim meu rei, destruirei todo aquele reino!')
+                print('\nEntão o grande Guerreiro vai até o encontro do castelo do rei esqueleto, \naté que no caminho um goblin pula do arbusto para te atacar.')
+                input('\nCONTINUAR?')
+                limpa_tela()
 
                 terminar_jogo = True
                 break
