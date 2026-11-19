@@ -1,4 +1,5 @@
 from util import limpa_tela
+import time
 from guerreiro import guerreiro_ficha, mostrar_guerreiro
 from arqueiro import arqueiro_ficha, mostrar_arqueiro
 from assassino import assassino_ficha, mostrar_assassino
@@ -30,10 +31,38 @@ while(True):
             if(certeza_de_guerreiro == 1):
                 limpa_tela()
                 
-                print('Você é um grande Guerreiro em uma vila isolada dos mapas, \nDaqueles Guerreiros que não falham, apenas o melhor do reino, \nEntão o Rei um dia te chama até seu castelo.')
-                print('\n\033[1mRei:\033[0m Meu grande Guerreiro, o rei esqueleto da cidade amaldiçoada \nestá ameaçando nossas vendas de mercadoria, isso não pode acontecer! \nVá até lá e o derrote com toda a sua bravura!')
-                print('\n\033[1mGuerreiro:\033[0m Sim meu rei, destruirei todo aquele reino!')
-                print('\nEntão o grande Guerreiro vai até o encontro do castelo do rei esqueleto, \naté que no caminho um goblin pula do arbusto para te atacar.')
+                texto = 'Você é um grande Guerreiro em uma vila isolada dos mapas, \nDaqueles Guerreiros que não falham, apenas o melhor do reino, \nEntão o Rei um dia te chama até seu castelo.'
+                for letra in texto:
+                    print(letra, end="", flush=True)
+                    time.sleep(0.09)
+
+                time.sleep(0.3)
+
+                print('\n')
+                texto = '\n\033[1mRei:\033[0m Meu grande Guerreiro, o rei esqueleto da cidade amaldiçoada \nestá ameaçando nossas vendas de mercadoria, isso não pode acontecer! \nVá até lá e o derrote com toda a sua bravura!'
+                for letra in texto:
+                    print(letra, end="", flush=True)
+                    time.sleep(0.09)
+
+                time.sleep(0.3)
+
+                print('\n')
+                texto = '\n\033[1mGuerreiro:\033[0m Sim meu rei, destruirei todo aquele reino!'
+                for letra in texto:
+                    print(letra, end="", flush=True)
+                    time.sleep(0.09)
+
+                time.sleep(0.3)
+
+                print('\n')
+                texto = '\nEntão o grande Guerreiro vai até o encontro do castelo do rei esqueleto, \naté que no caminho um goblin pula do arbusto para te atacar.'
+                for letra in texto:
+                    print(letra, end="", flush=True)
+                    time.sleep(0.09)
+
+                time.sleep(0.3)
+
+                print('\n')
                 input('\nCONTINUAR?')
                 limpa_tela()
 

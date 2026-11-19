@@ -20,23 +20,22 @@ def mostrar_guerreiro(guerreiro_ficha):
 
 
 def rolagem_ataque_guerreiro(guerreiro_ficha):
-    input('Rolar ataque?')
+    input('\nRolar ataque?')
     import random
     numero_ataque = random.randint(1, 20)
     if(numero_ataque == 20):
         print('\n=== CRÍTICO ===')
-        return 100
+        resultado_guerreiro = 100
     else:
-        print(f'\nAtaque: {numero_ataque} + {guerreiro_ficha["ataque"]} = {numero_ataque + guerreiro_ficha["ataque"]}')
-        return numero_ataque + guerreiro_ficha["ataque"]
+        resultado_guerreiro = numero_ataque + guerreiro_ficha["ataque"]
+        print(f'\nAtaque: {numero_ataque} + {guerreiro_ficha["ataque"]} = {resultado_guerreiro}')
+    return resultado_guerreiro
 
 
-#Tem que arrumar isso depois
-def calcular_dano_guerreiro(guerreiro_ficha, rolagem_ataque_guerreiro):
-    resultado = rolagem_ataque_guerreiro(guerreiro_ficha)
-    if (resultado == 100):
+def calcular_dano_guerreiro(guerreiro_ficha, resultado_guerreiro):
+    if (resultado_guerreiro == 100):
         print(f'\nDano: {guerreiro_ficha["espada"] * 2}')
         return guerreiro_ficha["espada"] * 2
     else:
-        print(f'Dano: {guerreiro_ficha["espada"]}')
+        print(f'\nDano: {guerreiro_ficha["espada"]}')
         return guerreiro_ficha["espada"]
