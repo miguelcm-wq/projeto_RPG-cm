@@ -35,7 +35,8 @@ def rolagem_ataque_guerreiro(guerreiro_ficha):
 def calcular_dano_guerreiro(guerreiro_ficha, resultado_guerreiro):
     if (resultado_guerreiro == 100):
         print(f'\nDano: {guerreiro_ficha["espada"] * 2}')
-        return guerreiro_ficha["espada"] * 2
+        dano_guerreiro = guerreiro_ficha["espada"] * 2
     else:
         print(f'\nDano: {guerreiro_ficha["espada"]}')
-        return guerreiro_ficha["espada"]
+        dano_guerreiro = guerreiro_ficha["espada"]
+    return dano_guerreiro
