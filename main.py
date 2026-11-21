@@ -1,10 +1,10 @@
 from util import limpa_tela
 import time
-from guerreiro import guerreiro_ficha, mostrar_guerreiro
+from guerreiro import guerreiro_ficha, mostrar_guerreiro, rolagem_ataque_guerreiro, calcular_dano_guerreiro, curar_guerreiro
 from arqueiro import arqueiro_ficha, mostrar_arqueiro
 from assassino import assassino_ficha, mostrar_assassino
 from mago import mago_ficha, mostrar_mago
-from oponente import goblin_ficha, rolagem_ataque_goblin, calcular_dano_goblin
+from batalha import guerreiro_nv1
 
 while(True):
     terminar_jogo = False
@@ -65,36 +65,7 @@ while(True):
 
                 print('\n')
                 input('\nCONTINUAR?')
-                limpa_tela()
-
-                mostrar_guerreiro(guerreiro_ficha)
-                print('=== VS ===')
-                print('Goblin'.center(10))
-                input('\nCOMEÇAR BATALHA?')
-                while(True):
-                    limpa_tela()
-                    print('Goblin ataca:')
-                    resultado_goblin = rolagem_ataque_goblin(goblin_ficha)
-                    if (resultado_goblin >= guerreiro_ficha["esquiva"]):
-                        print('\nGoblin te acerta!')
-                        dano_goblin = calcular_dano_goblin(goblin_ficha, resultado_goblin)
-                        guerreiro_ficha["vida_atual"] -= dano_goblin
-                    else:
-                        print('\nGoblin erra!')
-
-                    if(guerreiro_ficha["vida_atual"] <= 0):
-                        print('\nVocê morreu!')
-                        guerreiro_ficha["vida_atual"] = guerreiro_ficha["vida_max"]
-                        goblin_ficha["vida_atual"] = goblin_ficha["vida_max"]
-                        input('\nRECOMEÇAR BATALHA?')
-                    else:
-                        print(f'\nSua vida: {guerreiro_ficha["vida_atual"]} / {guerreiro_ficha["vida_max"]}')
-                        input('\nCONTINUAR?')
-
-                    limpa_tela()
-                    print('Guerreiro ataca:')
-                    mostrar_guerreiro(guerreiro_ficha)
-                    #continuar daqui
+                guerreiro_nv1()
                         
                 terminar_jogo = True
                 break
@@ -103,7 +74,7 @@ while(True):
                 break
 
             else:
-                print('Algo deu errado!')
+                print('\nAlgo deu errado!')
                 print('Tente novamente')
 
         if(terminar_jogo == True):
@@ -158,7 +129,7 @@ while(True):
                 break
         
             else:
-                print('Algo deu errado!')
+                print('\nAlgo deu errado!')
                 print('Tente novamente')
         
         if(terminar_jogo == True):
@@ -185,7 +156,7 @@ while(True):
                 break
         
             else:
-                print('Algo deu errado!')
+                print('\nAlgo deu errado!')
                 print('Tente novamente')
         
         if(terminar_jogo == True):

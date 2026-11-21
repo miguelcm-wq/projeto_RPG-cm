@@ -5,7 +5,8 @@ guerreiro_ficha = {
 "defesa": 5,
 "esquiva": 10,
 "espada": 15,
-"pocao_cura": 0
+"pocao_cura": 0,
+"moedas": 0
 }
 
 
@@ -40,3 +41,12 @@ def calcular_dano_guerreiro(guerreiro_ficha, resultado_guerreiro):
         print(f'\nDano: {guerreiro_ficha["espada"]}')
         dano_guerreiro = guerreiro_ficha["espada"]
     return dano_guerreiro
+
+def curar_guerreiro(guerreiro_ficha):
+    guerreiro_ficha["pocao_cura"] -= 1
+    guerreiro_ficha["vida_atual"] += 30
+    if (guerreiro_ficha["vida_atual"] >= guerreiro_ficha["vida_max"]):
+        guerreiro_ficha["vida_max"] = guerreiro_ficha["vida_atual"]
+    else:
+        pass
+    print(f'\nSua vida: {guerreiro_ficha["vida_atual"]}')
