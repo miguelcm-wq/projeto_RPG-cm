@@ -18,7 +18,7 @@ def guerreiro_nv1():
         resultado_goblin = rolagem_ataque_goblin(goblin_ficha)
         if (resultado_goblin >= guerreiro_ficha["esquiva"]):
             print('\nGoblin te acerta!')
-            dano_goblin = calcular_dano_goblin(goblin_ficha, resultado_goblin)
+            dano_goblin = calcular_dano_goblin(goblin_ficha, resultado_goblin) - guerreiro_ficha["defesa"]
             guerreiro_ficha["vida_atual"] -= dano_goblin
         else:
             print('\nGoblin erra!')
@@ -57,7 +57,7 @@ def guerreiro_nv1():
                         resultado_guerreiro = rolagem_ataque_guerreiro(guerreiro_ficha)
                         if (resultado_guerreiro >= goblin_ficha["esquiva"]):
                             print('\nGuerreiro acerta o ataque!')
-                            dano_guerreiro = calcular_dano_guerreiro(guerreiro_ficha, resultado_guerreiro)
+                            dano_guerreiro = calcular_dano_guerreiro(guerreiro_ficha, resultado_guerreiro) - goblin_ficha["defesa"]
                             goblin_ficha["vida_atual"] -= dano_guerreiro
                             input('\nPRÓXIMA RODADA?')
                             terminar_rodada = True
@@ -118,7 +118,7 @@ def guerreiro_nv1():
             print('!VOCÊ VENCEU!'.center(30))
             print('=' * 30)
             goblin_ficha["vida_atual"] = goblin_ficha["vida_max"]
-            print('\nCONTINUAR?')
+            input('\nCONTINUAR?')
             break
         else:
             pass

@@ -1,3 +1,6 @@
-from batalha import guerreiro_nv1
+from guerreiro import guerreiro_ficha
 
-guerreiro_nv1()
+personagem = {}
+input('oi')
+personagem = guerreiro_ficha
+print(personagem["defesa"])
