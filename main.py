@@ -1,5 +1,6 @@
 from util import limpa_tela
 import time
+from personagem import personagem_ficha
 from guerreiro import guerreiro_ficha, mostrar_guerreiro, rolagem_ataque_guerreiro, calcular_dano_guerreiro, curar_guerreiro
 from arqueiro import arqueiro_ficha, mostrar_arqueiro
 from assassino import assassino_ficha, mostrar_assassino
@@ -30,6 +31,7 @@ while(True):
             certeza_de_guerreiro = int(input('Digite: '))
 
             if(certeza_de_guerreiro == 1):
+                personagem_ficha = guerreiro_ficha
                 limpa_tela()
                 
                 texto = 'Você é um grande Guerreiro em uma vila isolada dos mapas, \nDaqueles Guerreiros que não falham, apenas o melhor do reino, \nEntão o Rei um dia te chama até seu castelo.'

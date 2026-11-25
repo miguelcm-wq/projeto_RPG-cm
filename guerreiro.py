@@ -1,4 +1,5 @@
 guerreiro_ficha = {
+"nome": 'Guerreiro',
 "vida_max": 100,
 "vida_atual": 100,
 "ataque": 3,
