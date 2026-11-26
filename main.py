@@ -5,7 +5,7 @@ from guerreiro import guerreiro_ficha, mostrar_guerreiro, rolagem_ataque_guerrei
 from arqueiro import arqueiro_ficha, mostrar_arqueiro
 from assassino import assassino_ficha, mostrar_assassino
 from mago import mago_ficha, mostrar_mago
-from batalha import guerreiro_nv1
+from batalha import batalha_nv1
 
 while(True):
     terminar_jogo = False
@@ -67,7 +67,7 @@ while(True):
 
                 print('\n')
                 input('\nCONTINUAR?')
-                guerreiro_nv1()
+                batalha_nv1(guerreiro_ficha)
                         
                 terminar_jogo = True
                 break

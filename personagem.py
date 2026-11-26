@@ -25,11 +25,11 @@ def rolagem_ataque_personagem(personagem_ficha):
 
 def calcular_dano_personagem(personagem_ficha, resultado_personagem):
     if (resultado_personagem == 100):
-        print(f'\nDano: {personagem_ficha["espada"] * 2}')
-        dano_personagem = personagem_ficha["espada"] * 2
+        print(f'\nDano: {personagem_ficha["dano"] * 2}')
+        dano_personagem = personagem_ficha["dano"] * 2
     else:
-        print(f'\nDano: {personagem_ficha["espada"]}')
-        dano_personagem = personagem_ficha["espada"]
+        print(f'\nDano: {personagem_ficha["dano"]}')
+        dano_personagem = personagem_ficha["dano"]
     return dano_personagem
 
 
@@ -38,6 +38,7 @@ def curar_personagem(personagem_ficha):
     personagem_ficha["vida_atual"] += 30
     if (personagem_ficha["vida_atual"] >= personagem_ficha["vida_max"]):
         personagem_ficha["vida_max"] = personagem_ficha["vida_atual"]
+        print(f'\nSua vida: {personagem_ficha["vida_atual"]}')
     else:
         pass
     print(f'\nSua vida: {personagem_ficha["vida_atual"]}')

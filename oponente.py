@@ -4,7 +4,7 @@ goblin_ficha = {
 "ataque": 2,
 "defesa": 1,
 "esquiva": 8,
-"facada": 10
+"dano": 10
 }
 
 def rolagem_ataque_goblin(goblin_ficha):
@@ -19,9 +19,9 @@ def rolagem_ataque_goblin(goblin_ficha):
 
 def calcular_dano_goblin(goblin_ficha, resultado_goblin):
     if (resultado_goblin == 100):
-        print(f'\nDano: {goblin_ficha["facada"] * 2}')
-        dano_goblin = goblin_ficha["facada"] * 2
+        print(f'\nDano: {goblin_ficha["dano"] * 2}')
+        dano_goblin = goblin_ficha["dano"] * 2
     else:
-        print(f'\nDano: {goblin_ficha["facada"]}')
-        dano_goblin = goblin_ficha["facada"]
+        print(f'\nDano: {goblin_ficha["dano"]}')
+        dano_goblin = goblin_ficha["dano"]
     return dano_goblin

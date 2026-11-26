@@ -1,6 +1,3 @@
-from guerreiro import guerreiro_ficha
+from batalha import guerreiro_nv1
 
-personagem = {}
-input('oi')
-personagem = guerreiro_ficha
-print(personagem["defesa"])
+guerreiro_nv1()

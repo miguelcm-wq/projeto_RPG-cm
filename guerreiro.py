@@ -5,7 +5,7 @@ guerreiro_ficha = {
 "ataque": 3,
 "defesa": 5,
 "esquiva": 10,
-"espada": 15,
+"dano": 15,
 "pocao_cura": 0,
 "moedas": 0
 }
@@ -36,11 +36,11 @@ def rolagem_ataque_guerreiro(guerreiro_ficha):
 
 def calcular_dano_guerreiro(guerreiro_ficha, resultado_guerreiro):
     if (resultado_guerreiro == 100):
-        print(f'\nDano: {guerreiro_ficha["espada"] * 2}')
-        dano_guerreiro = guerreiro_ficha["espada"] * 2
+        print(f'\nDano: {guerreiro_ficha["dano"] * 2}')
+        dano_guerreiro = guerreiro_ficha["dano"] * 2
     else:
-        print(f'\nDano: {guerreiro_ficha["espada"]}')
-        dano_guerreiro = guerreiro_ficha["espada"]
+        print(f'\nDano: {guerreiro_ficha["dano"]}')
+        dano_guerreiro = guerreiro_ficha["dano"]
     return dano_guerreiro
 
 def curar_guerreiro(guerreiro_ficha):
