@@ -1,8 +1,8 @@
 from util import limpa_tela
 from personagem import personagem_ficha, mostrar_personagem, rolagem_ataque_personagem, calcular_dano_personagem, curar_personagem
 from oponente import goblin_ficha, rolagem_ataque_goblin, calcular_dano_goblin
-#fazer sistema de habilidade e de ganhar moedas
-def batalha_nv1(personagem_ficha):
+
+def batalha_goblin_nv1(personagem_ficha):
     limpa_tela()
     pocoes_usadas = 0
     mostrar_personagem(personagem_ficha)
@@ -19,6 +19,10 @@ def batalha_nv1(personagem_ficha):
         if (resultado_goblin >= personagem_ficha["esquiva"]):
             print('\nGoblin te acerta!')
             dano_goblin = calcular_dano_goblin(goblin_ficha, resultado_goblin) - personagem_ficha["defesa"]
+            if (dano_goblin < 0):
+                dano_goblin = 0
+            else:
+                pass
             personagem_ficha["vida_atual"] -= dano_goblin
         else:
             print('\nGoblin erra!')
@@ -57,6 +61,10 @@ def batalha_nv1(personagem_ficha):
                         if (resultado_personagem >= goblin_ficha["esquiva"]):
                             print(f'\n{personagem_ficha["nome"]} acerta o ataque!')
                             dano_personagem = calcular_dano_personagem(personagem_ficha, resultado_personagem) - goblin_ficha["defesa"]
+                            if (dano_personagem < 0):
+                                dano_personagem = 0
+                            else:
+                                pass
                             goblin_ficha["vida_atual"] -= dano_personagem
                             input('\nPRÓXIMA RODADA?')
                             terminar_rodada = True
@@ -112,7 +120,10 @@ def batalha_nv1(personagem_ficha):
             limpa_tela()
             print('=' * 30)
             print('!VOCÊ VENCEU!'.center(30))
+            print(f'!Você ganhou {goblin_ficha["recompensa"]} moedas!'.center(30))
             print('=' * 30)
+            personagem_ficha["moedas"] += goblin_ficha["recompensa"]
+            personagem_ficha["vida_atual"] = personagem_ficha["vida_max"]
             goblin_ficha["vida_atual"] = goblin_ficha["vida_max"]
             input('\nCONTINUAR?')
             break

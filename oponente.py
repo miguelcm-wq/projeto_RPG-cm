@@ -4,7 +4,9 @@ goblin_ficha = {
 "ataque": 2,
 "defesa": 1,
 "esquiva": 8,
-"dano": 10
+"dano": 10,
+"recompensa_moeda": 10,
+"remcompensa_xp" : 5
 }
 
 def rolagem_ataque_goblin(goblin_ficha):
